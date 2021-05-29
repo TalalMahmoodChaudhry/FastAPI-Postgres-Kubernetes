@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fast-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fast-api
+  template:
+    metadata:
+      labels:
+        app: fast-api
+    spec:
+      containers:
+        - image: <CONTAINER REGISTRY>/fast-api:latest  -- Replace <CONTAINER REGISTRY> with a valid url
+          name: fast-api
+          command: ["alembic", "upgrade", "head", "&&", "uvicorn", "src.app.app:app", "--host", "0.0.0.0", "--port", "80"]
+          ports:
+            - name: http
+              containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: fast-api-secret
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "300m"

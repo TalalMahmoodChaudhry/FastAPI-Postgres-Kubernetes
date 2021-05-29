@@ -1,0 +1,15 @@
+pydantic==1.8.2
+starlette==0.14.2
+uvicorn==0.13.4
+fastapi==0.65.1
+python-multipart==0.0.5
+requests==2.25.1
+opencensus==0.7.13
+opencensus-ext-azure==1.0.8
+opencensus-ext-logging==0.1.0
+opencensus-ext-postgresql==0.1.2
+opencensus-ext-requests==0.7.4
+SQLAlchemy==1.4.15
+alembic==1.6.5
+pytest==6.2.4
+pytest-order==0.11.0
