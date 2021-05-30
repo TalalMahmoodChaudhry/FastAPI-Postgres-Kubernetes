@@ -28,6 +28,7 @@ Creating a virtual environment is recommended.
 `python -m src.app.app`
 
 The application should now be listening on localhost:8000
+
 swagger: localhost:8000/docs
 
 
@@ -35,8 +36,11 @@ swagger: localhost:8000/docs
 `make clean_run`
 
 The application should now be listening on localhost:8000
+
 swagger: http://localhost:8000/docs
+
 redoc: http://localhost:8000/redoc
+
 pgadmin: http://localhost:5050
 
 ### Stopping Docker

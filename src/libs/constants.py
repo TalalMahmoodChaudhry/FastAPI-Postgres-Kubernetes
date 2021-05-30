@@ -9,7 +9,7 @@ password = os.getenv('PASSWORD', 'fake-password')
 DATABASE_URL = os.environ['DATABASE_URL']
 
 
-class LanguagesEnum(enum.Enum):
+class LanguagesEnum(str, enum.Enum):
     english = "English"
     french = "French"
     german = "German"
