@@ -1,5 +1,5 @@
 # Introduction 
-This api was developed using python version 3.7
+This api was developed using python version 3.9
 
 # Running API
 
@@ -8,9 +8,7 @@ This api was developed using python version 3.7
 ### Environment Variables
 DATABASE_URL: postgresql database url
 
-USERNAME (Optional): user for the basic authentication
-
-PASSWORD (Optional): password for the basic authentication
+SECRET_KEY (Optional): for access tokens
 
 APPLICATION_INSIGHTS_KEY (Optional): To persist logs to Azure Application Insights
 with correlation of logs within each request
@@ -31,7 +29,6 @@ Creating a virtual environment is recommended.
 `python -m src.app.app`
 
 The application should now be listening on localhost:8000
-
 swagger: localhost:8000/docs
 
 

@@ -15,7 +15,7 @@ spec:
       containers:
         - image: <CONTAINER REGISTRY>/fast-api:latest  -- Replace <CONTAINER REGISTRY> with a valid url
           name: fast-api
-          command: ["alembic", "upgrade", "head", "&&", "uvicorn", "src.app.app:app", "--host", "0.0.0.0", "--port", "80"]
+          command: ["alembic", "upgrade", "head", "&&", "python", "-m", "src.main"]
           ports:
             - name: http
               containerPort: 8000

@@ -14,9 +14,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bash -c "alembic upgrade head && uvicorn src.app.app:app --host 0.0.0.0 --port 8000 --reload"
+    command: bash -c "alembic upgrade head && python -m src.main"
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+      - SECRET_KEY=de4d36b1c5605f70c8aab59216e4261ad8b984b75e23b978c07c22bedc14215e
     ports:
       - "8000:8000"
     depends_on:

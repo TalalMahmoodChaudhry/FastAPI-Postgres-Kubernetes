@@ -1,8 +1,18 @@
+import enum
+
 from sqlalchemy import ForeignKey, Column, Integer, String, Enum
 from sqlalchemy.orm import relationship
 
 from src.app.database import Base
-from src.libs.constants import LanguagesEnum
+
+
+class LanguagesEnum(str, enum.Enum):
+    english = "English"
+    french = "French"
+    german = "German"
+    chinese = "Chinese"
+    arabic = "Arabic"
+    urdu = "Urdu"
 
 
 class Author(Base):

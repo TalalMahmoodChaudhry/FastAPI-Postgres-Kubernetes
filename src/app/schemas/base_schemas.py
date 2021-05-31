@@ -1,9 +1,8 @@
 from typing import List, Optional
-import json
 
 from pydantic import BaseModel
 
-from src.libs.constants import LanguagesEnum
+from src.app.models.base_models import LanguagesEnum
 
 
 class BookCreate(BaseModel):
