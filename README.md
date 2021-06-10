@@ -29,7 +29,14 @@ Creating a virtual environment is recommended.
 `python -m src.app.app`
 
 The application should now be listening on localhost:8000
+
 swagger: localhost:8000/docs
+
+Authenticate using following details:
+```
+username: talal
+password: secret
+```
 
 
 ## With Docker
